@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login System</h2>
+        <div class="notification" id="notification"></div>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+        <button id="forgot-password" onclick="forgotPassword()">Forgot Password?</button>
+        <button id="logout" onclick="logout()">Logout</button>
+    </div>
+    
+    <div class="container" id="secured-page">
+        <h2>Secured Page</h2>
+        <p>Welcome to the secured page, <span id="user-name"></span>!</p>
+    </div>
+    
+    <div class="container" id="2fa-prompt" style="display:none;">
+        <h2>Two-Factor Authentication</h2>
+        <input type="text" id="2fa-code" placeholder="Enter 2FA Code">
+        <button onclick="verify2FA()">Verify</button>
+    </div>
+    
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
